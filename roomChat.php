@@ -1,4 +1,5 @@
 <?php include "views/header.php"; ?>
+<?php include "lib/db.php"; ?>
 
 <div class="form-group">
     <form action="roomChat.php" method="post">
@@ -7,7 +8,9 @@
     </form>
 
 </div>
-
+<?php
+$req = $db->query
+?>
 <div class="panel panel-info">
     <div class="panel-heading">Pseudo : </div>
     <div class="panel-body">
