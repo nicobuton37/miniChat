@@ -9,10 +9,12 @@
 
 </div>
 <?php
-$req = $db->query
+$query = $db->query('SELECT name FROM users');
+$name = $query->fetchAll();
+var_dump($name);
 ?>
 <div class="panel panel-info">
-    <div class="panel-heading">Pseudo : </div>
+    <div class="panel-heading">Pseudo : <?= $name['name']; ?> </div>
     <div class="panel-body">
         contenu du message
     </div>

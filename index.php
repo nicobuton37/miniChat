@@ -1,6 +1,7 @@
 <?php include "views/header.php"; ?>
 <?php include "lib/db.php"; ?>
 
+
         <div class="panel panel-default">
             <div class="panel-heading">Entrez votre Pseudo</div>
             <div class="panel-body">
