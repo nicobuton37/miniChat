@@ -7,7 +7,6 @@ $queryName = $db->query('SELECT name FROM users');
 $name = $queryName->fetch();
 $queryId = $db->query('SELECT id FROM users');
 $idUser = $queryId->fetch();
-
 ?>
 
 <div class="form-group">
@@ -15,6 +14,9 @@ $idUser = $queryId->fetch();
         <input type="text" name="pseudo" value='<?= $name['name'];?>' disabled="true" class="form-control">
         <textarea name="message" rows="8" cols="80" placeholder="Votre message" class="form-control"></textarea>
         <button type="submit" name="sendMess" class="btn btn-info">Poster</button>
+
+<!-- Insert message in db -->
+
         <?php if(isset($_POST['message'])){
             $insert = $db->prepare("INSERT INTO messages(id_user, message, date_pub)VALUES(:id_user, :message, :date_pub)");
             $insert->execute(array(
