@@ -24,6 +24,7 @@
         <div class="navbar navbar-inverse">
             <ul class="nav navbar-nav">
                 <li><a href="roomChat.php">Chattez</a></li>
+                <li><a href="index.php">Accueil</a></li>
             </ul>
         </div>
         <h1>MiniCh@t</h1>
