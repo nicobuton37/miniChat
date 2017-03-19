@@ -9,9 +9,8 @@
 
 </div>
 <?php
-$query = $db->query('SELECT name FROM users');
-$name = $query->fetchAll();
-var_dump($name);
+$queryName = $db->query('SELECT name FROM users');
+$name = $queryName->fetch();
 ?>
 <div class="panel panel-info">
     <div class="panel-heading">Pseudo : <?= $name['name']; ?> </div>
