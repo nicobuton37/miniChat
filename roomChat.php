@@ -9,13 +9,16 @@ $name = $queryName->fetch();
     <form action="roomChat.php" method="post">
         <input type="text" name="pseudo" value='<?= $name['name'];?>' disabled="true" class="form-control">
         <textarea name="message" rows="8" cols="80" placeholder="Votre message" class="form-control"></textarea>
+        <button type="submit" name="sendMess" class="btn btn-info">Poster</button>
     </form>
 
 </div>
 <div class="panel panel-info">
     <div class="panel-heading">Pseudo : <?= $name['name']; ?> </div>
     <div class="panel-body">
-        contenu du message
+        <?php if(isset($_POST['message'])){
+            echo $_POST['message'];
+        } ?>
     </div>
     <div class="panel-footer">Posté le : </div>
 </div>
